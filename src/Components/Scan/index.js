@@ -84,7 +84,7 @@ class Scan extends Component {
                 source={require('../../assets/back.png')}
                 style={{height: 36, width: 36}}></Image>
             </TouchableOpacity>
-            <Text style={styles.textTitle}>Paq Tec</Text>
+            <Text style={styles.textTitle}>PAQ TEC</Text>
           </View>
           {/*      {!scan && !ScanResult && (
             <View style={styles.cardView}>
@@ -116,13 +116,19 @@ class Scan extends Component {
               <View style={ScanResult ? styles.scanCardView : styles.cardView}>
                 {!loading ? (
                   <Fragment>
+                      <Image
+                    source={require('../../assets/logo.png')}
+                    style={{height: 80, width: 80}}></Image>
                     <Text style={styles.textTitle1}>Result</Text>
-                    <Text>Id : {result.pro_id && result.pro_id}</Text>
+                    <Text>Id : {result.pro_codigo && result.pro_codigo}</Text>
                     <Text numberOfLines={1}>
                       Rol: {result.pro_rol && result.pro_rol}
                     </Text>
                     <Text numberOfLines={1}>
                       Producto: {result.pro_producto && result.pro_producto}
+                    </Text>
+                    <Text numberOfLines={1}>
+                      respuesta: {result.pro_respuesta && result.pro_respuesta}
                     </Text>
                   </Fragment>
                 ) : (
